@@ -201,7 +201,7 @@
                 if (result) signOut()
             }}>로그아웃</button>
         {:else}
-            <button id="start" on:click={() => {$popupEnabled = true}}>내 트리 만들기</button>
+            <button id="start" on:click={() => {$popupEnabled = true}}>로그인</button>
         {/if}
         <button id="view" on:click={() => {location.href = `/view`}}>트리 구경하기</button>
     </div>
