@@ -33,7 +33,7 @@ export const load: PageServerLoad = async (data) => {
     if (user && user[0].length == 0) {
         await connection.query(`insert into haesolusers values (?,?)`,[id,0])
         await connection.query(`insert into haesolchallenges values (?,?,?)`,[id,JSON.stringify(defaultChallenges),0])
-        return {user:{id,snowflake:0},challenge:{challenges:defaultChallenges},hasTree:false}
+        return {user:{id,snowflake:0},challenge:{challenges:JSON.stringify(defaultChallenges)},hasTree:false}
     }
 
     let tree = undefined
